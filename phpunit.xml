@@ -1,42 +1,21 @@
-<phpunit backupGlobals="false"
-         backupStaticAttributes="false"
+<?xml version="1.0"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+         backupGlobals="false"
+         backupStaticProperties="false"
          colors="true"
-         convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
-         convertWarningsToExceptions="true"
          processIsolation="false"
          stopOnFailure="false"
          bootstrap="vendor/autoload.php"
-        >
-    <testsuites>
-        <testsuite name="Unit-Tests">
-            <directory>./test</directory>
-        </testsuite>
-    </testsuites>
-    <filter>
-        <whitelist addUncoveredFilesFromWhitelist="true">
-            <directory>./lib</directory>
-        </whitelist>
-    </filter>
-    
-    <logging>
-        <log
-            type="coverage-text"
-            target="php://stdout"
-            lowUpperBound="35"
-            highLowerBound="75"
-        />
-        <!-- uncomment below to generate HTML code coverage reports in ./test/coverage -->
-        <!--
-        <log
-            type="coverage-html"
-            target="./test/coverage"
-            charset="UTF-8"
-            yui="true"
-            lowUpperBound="35"
-            highLowerBound="70"
-            showUncoveredFiles="true"
-        />
-        -->
-    </logging>
+         cacheDirectory=".phpunit.cache">
+  <testsuites>
+    <testsuite name="Unit-Tests">
+      <directory>./test</directory>
+    </testsuite>
+  </testsuites>
+  <source>
+    <include>
+      <directory>./lib</directory>
+    </include>
+  </source>
 </phpunit>

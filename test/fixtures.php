@@ -268,6 +268,7 @@ class ClassOuter
 
 class ProvTestNoDefinitionNullDefaultClass
 {
+    public $arg;
     public function __construct($arg = null)
     {
         $this->arg = $arg;
@@ -320,6 +321,7 @@ class InjectorTestRawCtorParams
 
 class InjectorTestParentClass
 {
+    public $arg1;
     public function __construct($arg1)
     {
         $this->arg1 = $arg1;
@@ -328,6 +330,7 @@ class InjectorTestParentClass
 
 class InjectorTestChildClass extends InjectorTestParentClass
 {
+    public $arg2;
     public function __construct($arg1, $arg2)
     {
         parent::__construct($arg1);
@@ -579,6 +582,7 @@ class TestDependencyWithProtectedConstructor
 
 class TestNeedsDepWithProtCons
 {
+    public $dep;
     public function __construct(TestDependencyWithProtectedConstructor $dep)
     {
         $this->dep = $dep;
@@ -733,6 +737,7 @@ class DelegateA
 }
 class DelegatingInstanceA
 {
+    public $a;
     public function __construct(DelegateA $a)
     {
         $this->a = $a;
@@ -744,6 +749,7 @@ class DelegateB
 }
 class DelegatingInstanceB
 {
+    public $b;
     public function __construct(DelegateB $b)
     {
         $this->b = $b;

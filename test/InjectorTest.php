@@ -2,6 +2,7 @@
 
 namespace Auryn;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 class InjectorTest extends TestCase
@@ -379,9 +380,7 @@ class InjectorTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider provideInvalidDelegates
-     */
+    #[DataProvider('provideInvalidDelegates')]
     public function testDelegateThrowsExceptionIfDelegateIsNotCallableOrString($badDelegate): void
     {
         $this->expectException(ConfigException::class);
@@ -430,9 +429,7 @@ class InjectorTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider provideExecutionExpectations
-     */
+    #[DataProvider('provideExecutionExpectations')]
     public function testProvisionedInvokables($toInvoke, $definition, $expectedResult): void
     {
         $injector = new Injector();
@@ -739,9 +736,7 @@ class InjectorTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider provideCyclicDependencies
-     */
+    #[DataProvider('provideCyclicDependencies')]
     public function testCyclicDependencies($class): void
     {
         $this->expectException(InjectionException::class);
