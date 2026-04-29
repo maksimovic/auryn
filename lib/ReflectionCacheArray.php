@@ -4,7 +4,7 @@ namespace Auryn;
 
 class ReflectionCacheArray implements ReflectionCache
 {
-    private $cache = array();
+    private array $cache = [];
 
     public function fetch($key)
     {

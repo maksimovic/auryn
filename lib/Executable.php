@@ -4,9 +4,9 @@ namespace Auryn;
 
 class Executable
 {
-    private $callableReflection;
-    private $invocationObject;
-    private $isInstanceMethod;
+    private \ReflectionFunctionAbstract $callableReflection;
+    private ?object $invocationObject = null;
+    private bool $isInstanceMethod;
 
     public function __construct(\ReflectionFunctionAbstract $reflFunc, $invocationObject = null)
     {
