@@ -1,7 +1,9 @@
-# auryn [![Build Status](https://travis-ci.org/rdlowrey/auryn.svg?branch=master)](https://travis-ci.org/rdlowrey/auryn)
+# auryn [![CI](https://github.com/maksimovic/auryn/actions/workflows/ci.yml/badge.svg?branch=1.5.x)](https://github.com/maksimovic/auryn/actions/workflows/ci.yml)
 
 auryn is a recursive dependency injector. Use auryn to bootstrap and wire together
 S.O.L.I.D., object-oriented PHP applications.
+
+> **About this fork.** `maksimovic/auryn` is a maintained fork of [`rdlowrey/auryn`](https://github.com/rdlowrey/auryn) that targets PHP 8.1–8.5. Upstream has not been tagged past `v1.4.4`, which predates the PHP 8.4 deprecation fix. This fork starts from the upstream `master` tip (`895d666`), bumps the minimum PHP to 8.1, moves the test suite to PHPUnit 10, and runs CI against PHP 8.1, 8.2, 8.3, 8.4, and 8.5. The package declares `replace: { "rdlowrey/auryn": "^1.4.4" }`, so transitive consumers that require `rdlowrey/auryn` resolve cleanly. The library API is unchanged.
 
 ##### How It Works
 
@@ -44,7 +46,7 @@ caches any reflections it generates to minimize the potential performance impact
 
 ## Requirements and Installation
 
-- auryn requires PHP 5.3 or higher.
+- auryn requires PHP 8.1 or higher.
 
 #### Installation
 
@@ -53,23 +55,23 @@ caches any reflections it generates to minimize the potential performance impact
 You can clone the latest auryn iteration at anytime from the github repository:
 
 ```bash
-$ git clone git://github.com/rdlowrey/auryn.git
+$ git clone https://github.com/maksimovic/auryn.git
 ```
 
 ###### Composer
 
-You may also use composer to include auryn as a dependency in your projects `composer.json`. The relevant package is `rdlowrey/auryn`.
+You may also use composer to include auryn as a dependency in your projects `composer.json`. The relevant package is `maksimovic/auryn`, which `replace`s `rdlowrey/auryn ^1.4.4` so that transitive consumers continue to resolve correctly.
 
 Alternatively require the package using composer cli:
 
 ```bash
-composer require rdlowrey/auryn
+composer require maksimovic/auryn
 ```
 
 ##### Manual Download
 
 Archived tagged release versions are also available for manual download on the project
-[tags page](https://github.com/rdlowrey/auryn/tags)
+[tags page](https://github.com/maksimovic/auryn/tags)
 
 
 ## Basic Usage
