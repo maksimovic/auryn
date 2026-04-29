@@ -1,7 +1,7 @@
 {
-    "name": "rdlowrey/auryn",
-    "homepage": "https://github.com/rdlowrey/auryn",
-    "description": "Auryn is a dependency injector for bootstrapping object-oriented PHP applications.",
+    "name": "maksimovic/auryn",
+    "homepage": "https://github.com/maksimovic/auryn",
+    "description": "PHP 8.1-8.5 compatible fork of rdlowrey/auryn — a dependency injector for bootstrapping object-oriented PHP applications.",
     "keywords": ["dependency injection", "dic", "ioc"],
     "license": "MIT",
     "authors": [
@@ -22,15 +22,22 @@
             "email": "Danack@basereality.com",
             "homepage": "http://www.basereality.com",
             "role": "Developer"
+        },
+        {
+            "name": "Oliver Maksimovic",
+            "email": "maksimovic@mukuru.com",
+            "role": "Fork Maintainer",
+            "homepage": "https://github.com/maksimovic"
         }
     ],
+    "replace": {
+        "rdlowrey/auryn": "^1.4.4"
+    },
     "require": {
-        "php": ">=7.1"
+        "php": "^8.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7 || ^8",
-        "friendsofphp/php-cs-fixer": "^2",
-        "athletic/athletic": "~0.1"
+        "phpunit/phpunit": "^10.5"
     },
     "autoload": {
         "psr-4": {
