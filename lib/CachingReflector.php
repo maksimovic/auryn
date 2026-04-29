@@ -10,8 +10,8 @@ class CachingReflector implements Reflector
     public const CACHE_KEY_FUNCS = 'auryn.refls.funcs.';
     public const CACHE_KEY_METHODS = 'auryn.refls.methods.';
 
-    private $reflector;
-    private $cache;
+    private Reflector $reflector;
+    private ReflectionCache $cache;
 
     public function __construct(?Reflector $reflector = null, ?ReflectionCache $cache = null)
     {
@@ -62,7 +62,7 @@ class CachingReflector implements Reflector
             $paramCacheKey = self::CACHE_KEY_CLASSES . "{$lowClass}.{$lowMethod}.param-{$lowParam}";
         } else {
             $lowFunc = strtolower($function->name);
-            $paramCacheKey = (strpos($lowFunc, '{closure}') === false)
+            $paramCacheKey = !str_contains($lowFunc, '{closure}')
                 ? self::CACHE_KEY_FUNCS . ".{$lowFunc}.param-{$lowParam}"
                 : null;
         }

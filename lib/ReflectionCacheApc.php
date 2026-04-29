@@ -4,8 +4,8 @@ namespace Auryn;
 
 class ReflectionCacheApc implements ReflectionCache
 {
-    private $localCache;
-    private $timeToLive = 5;
+    private ReflectionCache $localCache;
+    private int $timeToLive = 5;
 
     public function __construct(?ReflectionCache $localCache = null)
     {
