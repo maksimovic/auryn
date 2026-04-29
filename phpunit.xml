@@ -1,29 +1,18 @@
 <?xml version="1.0"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" backupGlobals="false" colors="true" processIsolation="false" stopOnFailure="false" bootstrap="vendor/autoload.php" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd" cacheDirectory=".phpunit.cache" backupStaticProperties="false">
-  <coverage includeUncoveredFiles="true">
-    <report>
-      <text outputFile="php://stdout"/>
-    </report>
-  </coverage>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd"
+         backupGlobals="false"
+         backupStaticProperties="false"
+         colors="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         bootstrap="vendor/autoload.php"
+         cacheDirectory=".phpunit.cache">
   <testsuites>
     <testsuite name="Unit-Tests">
       <directory>./test</directory>
     </testsuite>
   </testsuites>
-  <logging>
-    <!-- uncomment below to generate HTML code coverage reports in ./test/coverage -->
-    <!--
-        <log
-            type="coverage-html"
-            target="./test/coverage"
-            charset="UTF-8"
-            yui="true"
-            lowUpperBound="35"
-            highLowerBound="70"
-            showUncoveredFiles="true"
-        />
-        -->
-  </logging>
   <source>
     <include>
       <directory>./lib</directory>
