@@ -39,7 +39,7 @@ class Executable
         $reflection = $this->callableReflection;
 
         if ($this->isInstanceMethod) {
-            return $reflection->invokeArgs($this->invocationObject, $args);
+            return $reflection->invokeArgs($reflection->isStatic() ? null : $this->invocationObject, $args);
         }
 
         return $this->callableReflection->isClosure()
