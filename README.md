@@ -3,7 +3,7 @@
 auryn is a recursive dependency injector. Use auryn to bootstrap and wire together
 S.O.L.I.D., object-oriented PHP applications.
 
-> **About this fork.** `maksimovic/auryn` is a maintained fork of [`rdlowrey/auryn`](https://github.com/rdlowrey/auryn) that targets PHP 8.1–8.5. Upstream has not been tagged past `v1.4.4`, which predates the PHP 8.4 deprecation fix. This fork starts from the upstream `master` tip (`895d666`), bumps the minimum PHP to 8.1, moves the test suite to PHPUnit 10, and runs CI against PHP 8.1, 8.2, 8.3, 8.4, and 8.5. The package declares `replace: { "rdlowrey/auryn": "^1.4.4" }`, so transitive consumers that require `rdlowrey/auryn` resolve cleanly. The library API is unchanged.
+> **About this fork.** `maksimovic/auryn` is a maintained fork of [`rdlowrey/auryn`](https://github.com/rdlowrey/auryn) that targets PHP 8.1–8.6. Upstream has not been tagged past `v1.4.4`, which predates the PHP 8.4 deprecation fix. This fork starts from the upstream `master` tip (`895d666`), bumps the minimum PHP to 8.1, moves the test suite to PHPUnit 10, and runs CI against PHP 8.1, 8.2, 8.3, 8.4, 8.5, and 8.6. The package declares `replace: { "rdlowrey/auryn": "^1.4.4" }`, so transitive consumers that require `rdlowrey/auryn` resolve cleanly. The library API is unchanged.
 
 ##### How It Works
 
